@@ -11,7 +11,7 @@
         <br>
         <H1>Добро пожаловать в глобальное управление пользователями!</H1>
         <br>
-        <input type="submit" value="Добавить пользователя">
+        <input type="submit" name="AddUser" value="Добавить пользователя">
     </div>
 </form>
 <%

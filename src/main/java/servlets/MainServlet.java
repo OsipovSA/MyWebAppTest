@@ -13,7 +13,10 @@ import java.sql.SQLException;
 @WebServlet(name = "MainServlet", urlPatterns = "")
 public class MainServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-
+        if(request.getParameter("AddUser")!=null)
+        {
+            request.getRequestDispatcher("AddNewUser.jsp").forward(request, response);
+        }
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
