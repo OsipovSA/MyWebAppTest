@@ -11,6 +11,23 @@
     <title>Add user</title>
 </head>
 <body>
-
+    <% if(request.getParameter("mistake")!=null){%>
+        Ошибки заполнения:
+        <br>
+        <%=request.getParameter("mistake")%>
+    <%}
+    %>
+    <br>
+    <div style="text-align:center">
+    <h1> Заполните все поля </h1>
+        <form method="post">
+            Логин:  <input type="text" name="Login">
+            Имя:    <input type="text" name="Name">
+            Пароль: <input type="password" name="Password">
+            Роль:   <input type="text" name="Role">
+            <br><br>
+            <input type="submit" name="CreateUser" value="Создать пользователя">
+        </form>
+    </div>
 </body>
 </html>
