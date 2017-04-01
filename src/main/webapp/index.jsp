@@ -8,6 +8,7 @@
 <body>
 <form method="post">
     <div style="text-align:center">
+        <br>
         <H1>Добро пожаловать в глобальное управление пользователями!</H1>
         <br>
         <input type="submit" value="Добавить пользователя">
