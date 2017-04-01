@@ -11,24 +11,24 @@
             <H1>Добро пожаловать в глобальное управление пользователями!</H1>
             <br>
             <a href="/addnewuser"><button>Добавить пользователя</button></a>
+            <br><br><br>
         </div>
 <%
     ArrayList<User> list = (ArrayList<User>) request.getAttribute("users");
-%>
-<table>
-    <%
-        if(list!=null){%>
-        <tr><th>Login</th><th>Name</th><th>Password</th><th>Role</th></tr>
-            <%for(User user:list){%>
-                <tr align="center">
-                    <td><%=user.getLogin()%></td>
-                    <td><%=user.getName()%></td>
-                    <td><%=user.getPassword()%></td>
-                    <td><%=user.getRole()%></td>
-                </tr>
-            <%}
-        }
-    %>
-</table>
+    if(list!=null){%>
+        <div align="center">
+           <table border="1">
+                <tr><th>Login</th><th>Name</th><th>Password</th><th>Role</th></tr>
+                <%for(User user:list){%>
+                    <tr align="center">
+                        <td width="100"><%=user.getLogin()%></td>
+                        <td width="100"><%=user.getName()%></td>
+                        <td width="100"><%=user.getPassword()%></td>
+                        <td width="100"><%=user.getRole()%></td>
+                    </tr>
+                <%}%>
+           </table>
+        </div>
+    <%}%>
 </body>
 </html>
