@@ -18,9 +18,10 @@ public class MainServlet extends javax.servlet.http.HttpServlet {
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
         try {
-            request.getSession().setAttribute("users", new UsersDAO(new MySQLConfiguration().getConnection()).getAllUsers());
+            request.setAttribute("users", new UsersDAO(new MySQLConfiguration().getConnection()).getAllUsers());
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 }
