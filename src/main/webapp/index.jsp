@@ -6,6 +6,8 @@
     <title>Test</title>
 </head>
 <body>
+Hello world!!!
+<!--
 <form action="index.jsp" method="post">
     <input type="submit" value="OK">
 </form>
@@ -22,5 +24,6 @@
     }
     %>
 </table>
+-->
 </body>
 </html>
