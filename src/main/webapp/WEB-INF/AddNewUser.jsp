@@ -11,15 +11,20 @@
     <title>Add user</title>
 </head>
 <body>
-    <% if(request.getParameter("mistake")!=null){%>
-        Ошибки заполнения:
+    <% if(request.getAttribute("mistake")!=null){%>
         <br>
-        <%=request.getParameter("mistake")%>
+        <div style="color:red; text-align: center">
+        <h2>
+        Необходимо заполнить все поля:
+        <br>
+            <%=request.getAttribute("mistake")%>
+        </h2>
+        </div>
     <%}
     %>
     <br>
     <div style="text-align:center">
-    <h1> Заполните все поля </h1>
+    <h1> Укажите значения полей: </h1>
         <form method="post">
             Логин:  <input type="text" name="Login">
             Имя:    <input type="text" name="Name">

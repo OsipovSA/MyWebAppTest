@@ -6,14 +6,12 @@
     <title>Test</title>
 </head>
 <body>
-<form method="post">
-    <div style="text-align:center">
-        <br>
-        <H1>Добро пожаловать в глобальное управление пользователями!</H1>
-        <br>
-        <input type="submit" name="AddUser" value="Добавить пользователя">
-    </div>
-</form>
+        <div align="center">
+            <br>
+            <H1>Добро пожаловать в глобальное управление пользователями!</H1>
+            <br>
+            <a href="/addnewuser"><button>Добавить пользователя</button></a>
+        </div>
 <%
     ArrayList<User> list = (ArrayList<User>) request.getAttribute("users");
 %>

@@ -26,7 +26,7 @@ public class UsersDAO {
     }
 
     public ArrayList<User> getAllUsers() throws SQLException {
-        ArrayList<User> users = null;
+        ArrayList<User> users = new ArrayList<>();
         return executor.execQuery("select * from users", result -> {
             while (result.next()) {
                 users.add(new User(result.getLong(1), result.getString(2), result.getString(3), result.getString(4), result.getString(5)));
