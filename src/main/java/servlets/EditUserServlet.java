@@ -63,5 +63,6 @@ public class EditUserServlet extends HttpServlet {
                 e.printStackTrace();
             }
         }
+        request.getRequestDispatcher("WEB-INF/EditUser.jsp").forward(request, response);
     }
 }
