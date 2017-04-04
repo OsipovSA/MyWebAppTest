@@ -26,11 +26,11 @@
                         <td width="100"><%=user.getPassword()%></td>
                         <td width="100"><%=user.getRole()%></td>
                         <form method="get" action="/edituser">
-                            <input type="hidden" name="id" value=<%user.getId();%>>
+                            <input type="hidden" name="id" value=<%user.getId().toString();%>>
                             <input type="submit" name="EditUser" value="Редактировать">
                         </form>
                         <form method="post" action="/deleteuser">
-                            <input type="hidden" name="id" value=<%user.getId();%>>
+                            <input type="hidden" name="id" value=<%user.getId().toString();%>>
                             <input type="submit" name="DeleteUser" value="Удалить">
                         </form>
                     </tr>
