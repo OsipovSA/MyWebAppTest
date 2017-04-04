@@ -33,7 +33,7 @@
         <br><br>
         <input type="hidden" name="id" value=<%=request.getAttribute("id")%>>
         <input type="submit" name="SaveUser" value="Сохранить изменения">
-        <input type="submit" name="ReturnUser" value="Отказаться">
+        <input type="submit" name="ReturnUser" value="Отмена">
     </form>
 </div>
 </body>

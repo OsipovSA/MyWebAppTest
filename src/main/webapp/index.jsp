@@ -18,21 +18,25 @@
     if(list!=null){%>
         <div align="center">
            <table border="1">
-                <tr><th>Login</th><th>Name</th><th>Password</th><th>Role</th></tr>
+                <tr><th>Login</th><th>Name</th><th>Password</th><th>Role</th><th>Edit</th><th>Delete</th></tr>
                 <%for(User user:list){%>
                     <tr align="center">
                         <td width="100"><%=user.getLogin()%></td>
                         <td width="100"><%=user.getName()%></td>
                         <td width="100"><%=user.getPassword()%></td>
                         <td width="100"><%=user.getRole()%></td>
+                        <td valign="center">
                         <form method="get" action="/edituser">
                             <input type="hidden" name="id" value=<%=user.getId().toString()%>>
                             <input type="submit" name="EditUser" value="Редактировать">
                         </form>
+                        </td>
+                        <td valign="center">
                         <form method="post" action="/deleteuser">
                             <input type="hidden" name="id" value=<%=user.getId().toString()%>>
                             <input type="submit" name="DeleteUser" value="Удалить">
                         </form>
+                        </td>
                     </tr>
                 <%}%>
            </table>

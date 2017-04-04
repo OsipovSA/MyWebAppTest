@@ -6,6 +6,7 @@ import models.User;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Created by Sergey on 26.03.2017.
@@ -48,7 +49,7 @@ public class UsersDAO {
     }
 
     public void updateUserById(long id, String login, String name, String password, String role) throws SQLException{
-        executor.execUpdate("update users set login = '"+login+"', name = '"+name+"', password = '"+password+"', role = '"+role+"' where  id = '"+id+"");
+        executor.execUpdate("update users set login = '"+login+"', name = '"+name+"', password = '"+password+"', role = '"+role+"' where  id = '"+id+"'");
     }
 
     public void deleteUserById(Long id) throws SQLException {
