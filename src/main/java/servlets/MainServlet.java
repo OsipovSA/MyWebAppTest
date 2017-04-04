@@ -13,9 +13,14 @@ import java.sql.SQLException;
 @WebServlet(name = "MainServlet", urlPatterns = "")
 public class MainServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-        if(request.getParameter("AddUser")!=null)
+        if(request.getParameter("DeleteUser")!=null)
         {
-            request.getRequestDispatcher("WEB-INF/AddNewUser.jsp").forward(request, response);
+            try {
+                new UsersDAO(new MySQLConfiguration().getConnection()).deleteUserById(Long.parseLong(request.getParameter("id")));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            response.sendRedirect("/");
         }
     }
 

@@ -47,6 +47,10 @@ public class UsersDAO {
         executor.execUpdate("insert into users (login, name, password, role) values ('"+login+"', '"+name+"', '"+password+"','"+role+"')");
     }
 
+    public void updateUserById(long id, String login, String name, String password, String role) throws SQLException{
+        executor.execUpdate("update users set login = '"+login+"', name = '"+name+"', password = '"+password+"', role = '"+role+"' where  id = '"+id+"");
+    }
+
     public void deleteUserById(Long id) throws SQLException {
         executor.execUpdate("delete from users where id = '"+id+"'");
     }

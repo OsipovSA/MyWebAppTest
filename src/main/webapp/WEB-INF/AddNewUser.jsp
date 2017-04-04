@@ -14,11 +14,11 @@
     <% if(request.getAttribute("mistake")!=null){%>
         <br>
         <div style="color:red; text-align: center">
-        <h2>
-        Необходимо заполнить все поля:
-        <br>
-            <%=request.getAttribute("mistake")%>
-        </h2>
+            <h2>
+                Необходимо заполнить все поля:
+                <br>
+                <%=request.getAttribute("mistake")%>
+            </h2>
         </div>
     <%}
     %>
